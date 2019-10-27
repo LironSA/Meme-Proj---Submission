@@ -1,0 +1,46 @@
+/*----General Helpers-----*/
+
+.margin {
+    margin: 0 auto;
+}
+
+/*----Flex Helpers-----*/
+
+.flex {
+    display: flex;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.flex.wrap {
+    flex-wrap: wrap;
+}
+
+.column {
+    flex-direction: column ;
+}
+
+/*----list helpers-----*/
+
+.clean-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.button {
+    background-color: blacknone;
+    border: none;
+
+}
+

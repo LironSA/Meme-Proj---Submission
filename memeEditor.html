@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meme Editor</title>
+    <link rel="icon" type="image/png" href="img/triangle.png" sizes="1000x100">
+    <link rel="stylesheet" href="css/memeEditorStyle.css">
+    <link rel="stylesheet" href="css/helpers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onload="init()">
+
+    <!-- <div class="screen" onclick="toggleMenu()"></div> -->
+
+    <header>
+        <nav class="nav-index flex margin">
+            <div class="logo">Memegens</div>
+            <ul class="main-nav flex hover">
+                <li><a href="index.html" alt="">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+    </header>
+
+
+    <main class="container margin flex">
+        <!-- Includes: Canvas + Edit Options  -->
+        <div class="canvas-container">
+            <canvas id="my-canvas" width="500" heigth="500"></canvas>
+        </div>
+
+        <div class="editOptions flex column space-around">
+            <input type="text" placeholder="Which MEME do you feel like today?" oninput="onTxtChanged(this.value)"
+                onclick="document.execCommand('selectall',null,false);" />
+            <div class="option1">
+                <!-- next / add / delete  -->
+                <button onclick="onNextTxt()"><img src="img\ICONS\up-and-down-opposite-double-arrows-side-by-side.png"
+                        alt="Image input control" width="35" height="35"></button>
+                <button class="btn-add" onclick="onAddLine(this)"><img src="img\ICONS\add.png" alt="Image input control"
+                        width="35" height="35"></button>
+                <button class="btn-del" onclick="onDeleteLine(this)"><img src="img\ICONS\trash.png"
+                        alt="Image input control" width="35" height="35"></button>
+            </div>
+            <div class="option2">
+                <!-- fontUp / fontDown / left / center / right  -->
+                <button onclick="onSetFontSize(1)"> <img src="img\ICONS\increase font - icon.png"
+                        alt="Image input control" width="35" height="35"></button>
+                <button onclick="onSetFontSize(-1)"><img src="img\ICONS\decrease font - icon.png"
+                        alt="Image input control" width="35" height="35"></button>
+                <button onclick="onSetAlign('left')"><img src="img\ICONS\align-to-left.png" alt="Image input control"
+                        width="35" height="35"></button>
+                <button onclick="onSetAlign('center')"><img src="img\ICONS\center-text-alignment.png"
+                        alt="Image input control" width="35" height="35"></button>
+                <button onclick="onSetAlign('right')"><img src="img\ICONS\align-to-right.png" alt="Image input control"
+                        width="35" height="35"></button>
+
+            </div>
+            <div class="option3">
+                <!-- choose font / stroke color / text color  -->
+                <form>
+                    <select id="myFont" onchange="onSetFont(event)">
+                        <option value="Arial">Arial</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Impact">Impact</option>
+                    </select>
+                </form>
+
+                <!-- <button onselect="onSetFont('Impact')">Font</button> -->
+                <button onclick="onSetStroke('stroke')" type="color"><img src="img\ICONS\text stroke.png"
+                        alt="Image input control" width="35" height="35"></button>
+                <input class="colorBox" type="color" onchange="onSetPenColor(this.value)" value="#000000" />
+                <br>
+            </div>
+
+            <!-- stickers - static pic -->
+            <div class="option4 stickers flex space-between">
+                <img src="img/static_stickers_1.jpg" />
+            </div>
+
+            <!-- Publish  -->
+            <form action="" method="POST" enctype="multipart/form-data" onsubmit="uploadImg(this, event)">
+                <input name="img" id="imgData" type="hidden" />
+                <button class="btn" type="submit">Share</button>
+                <div class="share-container"></div>
+            </form>
+
+            <a href="#" onclick="downloadCanvas(this)" download="">Download</a><br>
+
+            <!-- <input class="file-input btn" type="file" name="image" onchange="onImgInput(event)" /> -->
+<!-- 
+            <div class="gallery-index flex space-between">
+                <img src="img/Minions/minions4_1.jpg" onclick="onSelectImage(this)" />
+                <img src="img/Minions/minions3_1.jpg" onclick="onSelectImage(this)" />
+                <img src="img/Minions/minions9_1.jpg" onclick="onSelectImage(this)" />
+                <img src="img/Minions/minions6.jpg" onclick="onSelectImage(this)" />
+                <img src="img/Minions/Minion_Omri_face_1.jpg" onclick="onSelectImage(this)" />
+                <!-- <img src="img/Minions/Minion_Uriel_face_1.jpg" onclick="onSelectImage(this)" /> -->
+            <!-- </div> -->
+        </div>
+
+
+
+
+
+
+    </main>
+
+    <footer class="container margin flex column">
+        <div class="footer-editor">Memegens</div>
+        <div class="footer-editor small">© All rights reserved 2019</div>
+        <div class="contact-container">
+            <a href="https://www.linkedin.com" class="footer-img hover footer-list"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.facebook.com" class="footer-img hover footer-list"><i class="fa fa-facebook-f"></i></a>
+            <a href="https://github.com" class="footer-img hover footer-list"><i class="fa fa-github"></i></a>
+        </div>
+    </footer>
+
+
+    <!-- <script src="lib/jquery.js"></script> -->
+    <script src="js/utilService.js"></script>
+    <script src="js/memeService.js"></script>
+    <script src="js/memeEditorController.js"></script>
+    <script src="js/share.js"></script>
+
+</body>
+
+</html>

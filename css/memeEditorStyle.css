@@ -1,0 +1,253 @@
+/* -- FONTS STYLE -- */
+
+@font-face {
+    font-family: Indie Flower;
+    src: url('/fonts/Indie Flower/IndieFlower-Regular.ttf');
+}
+
+@font-face {
+    font-family: Mansalva;
+    src: url('/fonts/Mansalva/Mansalva-Regular.ttf');
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('/fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: Paytone One;
+    src: url('/fonts/Paytone One');
+}
+
+/* -- NAV STYLE -- */
+
+
+.nav-index {
+    height: 60px;
+    width: 80%;
+    color: #ffffff;
+    background-color: #ff7f00;
+}
+
+.logo {
+    font-family: 'Indie Flower', sans-serif;
+    font-size: 30px;
+    padding: 15px;
+    width: 80%;
+    height: 2rem;
+    align-items: left;
+}
+
+.main-nav {
+    width: 20%;
+    align-items: right;
+    text-align: center;
+    list-style-type: none;
+    justify-content: space-around;
+    color: white;
+}
+
+.open-menu .screen {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* -- CONTAINER STYLE -- */
+
+.container {
+    width: 80%;
+    background-color: white;
+}
+
+/* ---- canvas style ---- */
+
+canvas {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: block;
+    margin: 10%;
+    align-content: center;
+}
+
+.canvas-container {
+    width: 100%;
+}
+
+/* ---- edit options style ---- */
+
+
+/* 
+.options {
+    width: 100%;
+    padding: 5%;
+    text-align: center;
+} */
+
+.form {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    border-radius: 8px;
+    height: 35px;
+    padding-top: 0px;
+}
+
+.editOptions {
+    width: 100%;
+    padding: 5%;
+    text-align: center;
+}
+
+.editOptions input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    border-radius: 8px;
+    height: 35px;
+    padding-top: 0px;
+}
+
+button:disabled {
+    background-color: gray;
+    opacity: 0.3;
+}
+
+.button:disabled:hover {
+    cursor: default;
+}
+
+.stickers {
+    height: 35px;
+    width: 50px;
+    margin: 0 30% 0 30%;
+}
+
+/* -- PICS-MENU STYLE -- */
+
+.gallery-index {
+    height: 80px;
+    max-width: 20%;
+    align-items: center;
+    margin-bottom: 0.5%;
+    align-content: center;
+}
+
+.gallery-index img {
+    width: 80%;
+    height: 80px;
+    position: relative;
+    margin: 0 auto;
+    padding-right: 0 10% 0 10%;
+    padding: 2px;
+    border: blue solid 2 px;
+    align-items: center;
+}
+
+.gallery img {
+    /* width: 30px;
+    height: 30px; */
+    position: relative;
+    padding-right: 0 10% 0 10%;
+    padding: 2px;
+    border: blue solid 2 px;
+}
+
+button {
+    border-radius: 8px;
+    /* width: 10%; */
+    padding: 1%;
+    margin: 2%;
+}
+
+button:hover {
+    background-color: rgb(21, 114, 190);
+    color: white;
+    cursor: pointer;
+}
+
+.footer-editor {
+    font-family: 'Indie Flower', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    color: #ffffff;
+    background-color: #ff7f00;
+}
+
+.small {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    color: #ffffff;
+    background-color: #ff7f00;
+    flex-wrap: nowrap;
+}
+
+.rights {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-container {
+    flex-direction: column;
+    /* flex-wrap: nowrap; */
+    text-align: center;
+    width: 100%;
+    justify-content: space-around;
+    font-size: 30px;
+}
+
+@media (max-width: 1300px) {
+    .nav-index {
+        width: 100%;
+    }
+    .container {
+        width: 100%;
+    }
+    .canvas-container {
+        width: 100%;
+    }
+    .footer-editor {
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+    canvas {
+        background-color: rgba(0, 0, 0, 0.8);
+        display: block;
+        text-align: center;
+    }
+    .gallery img {
+        position: relative;
+        padding: 2%;
+        border: blue solid 2 px;
+    }
+    .editOptions {
+        padding: 0%;
+    }
+
+    .stickers {
+        height: 35px;
+        width: 50px;
+        margin: 0 40% 0 40%;
+    }
+
+    /* 
+
+    .container {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .editOptions {
+        width: 100%;
+    }
+    
+    .canvas {
+        width: 100%;
+    }
+} */

@@ -1,0 +1,115 @@
+@font-face {
+    font-family: Mansalva;
+    src: url('fonts/Mansalva/Mansalva-Regular.ttf');
+}
+
+/* -- PICS-MENU STYLE -- */
+
+h1 {
+    text-align: center;
+    font-family: Mansalva, sans-serif;
+    font-size: 3.5rem;
+}
+
+.nav-index {
+    height: 60px;
+    width: 100%;
+    color: #ffffff;
+    background-color: #ff7f00;
+}
+
+.logo {
+    font-family: 'Indie Flower', sans-serif;
+    font-size: 30px;
+    padding: 15px;
+    width: 80%;
+    height: 2rem;
+    align-items: left;
+}
+
+.main-nav {
+    width: 20%;
+    align-items: right;
+    text-align: center;
+    list-style-type: none;
+    justify-content: space-around;
+    color: white;
+}
+
+img {
+    position: relative;
+    padding: 2px;
+    margin: 30px;
+    border: mediumblue 10px;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+img:hover {
+    background-color: rgb(21, 114, 190);
+    cursor: pointer;
+  
+}
+
+
+/* ***************** */
+/* -- ABOUT STYLE -- */
+/* ***************** */
+
+footer {
+    font-size: 1em;
+    padding: 5px;
+    background-color: rgba(236, 4, 82, 0.931);
+    border: indigo solid 2px;
+    position: relative;
+    bottom: 0;
+    /* width: 10%; */
+    font-family: Mansalva, sans-serif;
+    text-align: center;
+}
+
+footer span {
+    color: rgb(38, 0, 255);
+}
+
+.about {
+    background-color: blue;
+    height: 80%;
+    padding: 0 5% 5% 5%;
+    text-align: center;
+    /* background-image: src="img/Gru.jpg"; */
+}
+
+.about img {
+    width: 200px;
+    height: 200px;
+}
+
+/* 
+@media (max-width: 900px) {
+    img {
+        position: relative;
+        padding: 2px;
+        margin: 30px;
+        border: mediumblue 10px;
+        max-width: 300px;
+        max-height: 300px;
+    } */
+
+
+/* 
+
+@media (max-width: 750px) {
+    .card-container > :not(:first-child):nth-child(odd) {
+        padding: 0 0 0 12px;
+    }
+    .card-container > :nth-child(even) {
+        padding: 0 12px 0 0;
+    }
+    .card-container > :first-child > :not(img) {
+        padding: 0;
+    }
+    .card-container > * {
+        margin-bottom: 2.5rem;
+    }
+} */
